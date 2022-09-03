@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://tenor.com/es/ver/fingerprint-gif-18211382">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="brand" id="brand" src="./src/assets/img.jpeg" alt="">
+        <nav class="navbar">
+            <!-- <li><a href="#">Home</a></li> -->
+            <li><a href="#favourite_images">Favourites</a></li>
+            <li><a href="#uploadingImage">Upload a picture</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <h1>API REST, Reference</h1>
+
+        <span id="errorMessage"></span>
+
+        <section class="random_image" id="random_image">
+            <div class="container_random" id="container_random"></div>
+            <div class="choise">
+                <label for="getImages">Choise:</label>
+                <select name="getImages" id="getImages">
+                    <option value="New Image">get new image</option>
+                    <option value="Gif Image">get gif image</option>
+                </select>
+                <span>Count: </span>
+                <input type="number" min="1" max="5" id="getImgNumber" placeholder="1">
+                <button id="btn_name" type="button" class="btn_submit" onclick="loadRandomCats()">Get new image</button>
+            </div>
+        </section>
+
+        <section id="favourite_images"></section>
+
+        <section class="uploadingImage" id="uploadingImage">
+            <div class="wrapper">
+                <div class="image">
+                    <img id="image" src="" alt="">
+                    <div id="cancel_btn"></div>
+                    <div class="file_name">File name here</div>
+                    <div class="gradient_img"></div>
+                    <div class="loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span id="span_message" class="span_message"></span>
+                </div>
+                <div class="content">
+                    <form id="uploadingForm" class="uploadingForm">
+                        <div class="upload_option">
+                            <img src="./src/assets/favicon_drag.svg" alt="">
+                            <div>
+                                <p class="d1 fw_700">Drag and drop</p>
+                                <p class="d2 fw_700">or paste images here to upload</p>
+                            </div>
+                        </div>
+                        <button class="select_image" type="button" onclick="uploadAImage()">Select Image</button>
+                        <input class="uploadingPhoto" id="image_input" type="file" name="file"
+                            accept="image/png, image/jpg, image/jpeg, image/gif">
+                    </form>
+                </div>
+                <button id="upload_btn" class="upload_image" type="button" onclick="uploadCatPhoto()"><span
+                        class="span_upload">Upload Image</span>
+                    <img class="preload" src="./src/assets/animation2.gif" alt="">
+                </button>
+            </div>
+        </section>
+        <div class="btn_up">
+            <a href="#" class="to_top"><img class="top" src="./src/assets/up.png" alt=""></a>
+        </div>
+    </main>
+
+    <footer>
+        <h1 class="copyright">Copyright Rigoberto Bruno Maldonado</h1>
+    </footer>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>
