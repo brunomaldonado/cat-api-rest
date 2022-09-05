@@ -42,6 +42,7 @@ setInterval(async function brandRandom() {
     const image = document.getElementById('brand')
     image.src = data[0].url;
     image.alt = data[0].id;
+    document.getElementById('brand_name').innerHTML = data[0].id;
     // console.log(image)
 }, 5000)
 
@@ -74,8 +75,8 @@ async function loadRandomCats() {
                 cRandom.innerHTML += `
                     <article class="container">
                         <div class="macro">
-                            <img class="favouriteImage" src= ${url_image.url} alt=${data[i].id}>
-                            <div class="btn_save">
+                            <img class="macro_image" src= ${url_image.url} alt=${data[i].id}>
+                            <div class="macro_bottom">
                                 <span id="image_id">${data[i].id}</span>
                                 <button class="btn_saveToFavourite" id="saveAsFavourite">Save as Favourite</button>
                             </div>
@@ -167,11 +168,11 @@ async function loadFavouritesCats() {
             const divMacro = document.createElement('div');
             divMacro.className = 'macro'
             const img = document.createElement('img');
-            img.className = 'favouriteImage'
+            img.className = 'macro_image'
             const divGradient = document.createElement('div');
             divGradient.className = 'gradient_img';
             const div = document.createElement('div');
-            div.className = 'btn_save'
+            div.className = 'macro_bottom'
             const span = document.createElement('span');
             const btn = document.createElement('button');
             btn.className = 'btn_deleteFavourite'
