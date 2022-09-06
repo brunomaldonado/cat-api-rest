@@ -131,7 +131,7 @@ async function loadFavouritesCats() {
         // span.className = 'favourites_title'
         const spanH1 = document.createTextNode("Favourites cats");
         span.appendChild(spanH1);
-        const spanText = document.createTextNode("Hide Galery");
+        const spanText = document.createTextNode("Hide Gallery");
         const button = document.createElement('button');
         button.className = 'btn_showElementts'
         let isShow = true;
@@ -139,11 +139,11 @@ async function loadFavouritesCats() {
                 if (isShow) {
                     document.querySelector('.container_favourites').style.display = 'none';
                     isShow = false;
-                    document.querySelector('.btn_showElementts').innerHTML = 'Show Galery';
+                    document.querySelector('.btn_showElementts').innerHTML = 'Show Gallery';
                 } else {
                     document.querySelector('.container_favourites').style.display = 'block';
                     isShow = true;
-                    document.querySelector('.btn_showElementts').innerHTML = 'Hide Galery';
+                    document.querySelector('.btn_showElementts').innerHTML = 'Hide Gallery';
                 }
             },
             button.append(spanText);
